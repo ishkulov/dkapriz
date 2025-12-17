@@ -3,7 +3,7 @@ import { SiInstagram, SiWhatsapp } from "react-icons/si";
 
 // todo: remove mock functionality
 const contactInfo = {
-  address: "г. Краснодар, ул. Красная, д. 150, ТЦ «Галерея», 2 этаж",
+  address: "г. Санкт-Петербург, Наличная ул., д. 49, ТЦ «Галерея», 2 эта",
   phone: "+7 (900) 123-45-67",
   hours: [
     { days: "Пн-Сб", time: "10:00 — 20:00" },
