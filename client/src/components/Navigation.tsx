@@ -21,8 +21,8 @@ export default function Navigation({ activeSection = "home", onNavigate }: Navig
 
   const navItems = [
     { id: "home", label: "Главная" },
-    { id: "catalog", label: "Каталог" },
-    { id: "about", label: "О нас" },
+    { id: "assortment", label: "Ассортимент" },
+    { id: "benefits", label: "Преимущества" },
     { id: "contacts", label: "Контакты" },
   ];
 
@@ -40,21 +40,21 @@ export default function Navigation({ activeSection = "home", onNavigate }: Navig
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-background/95 backdrop-blur-md border-b border-border"
+            ? "bg-background/95 backdrop-blur-md border-b border-border shadow-sm"
             : "bg-transparent"
         }`}
         data-testid="navigation"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 md:px-10 lg:px-16">
           <div className="flex items-center justify-between h-16 md:h-20">
             <div className="flex-shrink-0">
               <span
-                className={`font-serif text-2xl md:text-3xl font-semibold tracking-wide transition-colors ${
-                  isScrolled ? "text-foreground" : "text-white"
+                className={`font-serif text-xl md:text-2xl font-medium tracking-wide transition-colors ${
+                  isScrolled ? "text-foreground" : "text-[#1F1F1F]"
                 }`}
                 data-testid="logo"
               >
-                Белла
+                Дамский Каприз
               </span>
             </div>
 
@@ -63,14 +63,10 @@ export default function Navigation({ activeSection = "home", onNavigate }: Navig
                 <button
                   key={item.id}
                   onClick={() => handleNavClick(item.id)}
-                  className={`text-sm uppercase tracking-widest transition-colors ${
-                    isScrolled
-                      ? activeSection === item.id
-                        ? "text-primary"
-                        : "text-foreground/80 hover:text-foreground"
-                      : activeSection === item.id
-                      ? "text-white"
-                      : "text-white/80 hover:text-white"
+                  className={`text-sm transition-colors ${
+                    activeSection === item.id
+                      ? "text-primary font-medium"
+                      : "text-[#3A3A3A] hover:text-primary"
                   }`}
                   data-testid={`nav-link-${item.id}`}
                 >
@@ -82,9 +78,7 @@ export default function Navigation({ activeSection = "home", onNavigate }: Navig
             <div className="hidden md:flex items-center gap-4">
               <a
                 href="tel:+79001234567"
-                className={`flex items-center gap-2 text-sm transition-colors ${
-                  isScrolled ? "text-foreground" : "text-white"
-                }`}
+                className="flex items-center gap-2 text-sm text-[#3A3A3A] hover:text-primary transition-colors"
                 data-testid="phone-link"
               >
                 <Phone className="w-4 h-4" />
@@ -95,7 +89,7 @@ export default function Navigation({ activeSection = "home", onNavigate }: Navig
             <Button
               variant="ghost"
               size="icon"
-              className={`md:hidden ${isScrolled ? "" : "text-white"}`}
+              className="md:hidden"
               onClick={() => setIsMobileMenuOpen(true)}
               data-testid="mobile-menu-button"
             >
@@ -112,7 +106,7 @@ export default function Navigation({ activeSection = "home", onNavigate }: Navig
         >
           <div className="flex flex-col h-full">
             <div className="flex items-center justify-between p-4 border-b border-border">
-              <span className="font-serif text-2xl font-semibold">Белла</span>
+              <span className="font-serif text-xl font-medium">Дамский Каприз</span>
               <Button
                 variant="ghost"
                 size="icon"
@@ -127,10 +121,10 @@ export default function Navigation({ activeSection = "home", onNavigate }: Navig
                 <button
                   key={item.id}
                   onClick={() => handleNavClick(item.id)}
-                  className={`text-xl uppercase tracking-widest transition-colors ${
+                  className={`text-xl transition-colors ${
                     activeSection === item.id
-                      ? "text-primary"
-                      : "text-foreground/70 hover:text-foreground"
+                      ? "text-primary font-medium"
+                      : "text-[#3A3A3A] hover:text-primary"
                   }`}
                   data-testid={`mobile-nav-link-${item.id}`}
                 >
@@ -141,7 +135,7 @@ export default function Navigation({ activeSection = "home", onNavigate }: Navig
             <div className="p-6 text-center border-t border-border">
               <a
                 href="tel:+79001234567"
-                className="flex items-center justify-center gap-2 text-lg"
+                className="flex items-center justify-center gap-2 text-lg text-[#3A3A3A]"
                 data-testid="mobile-phone-link"
               >
                 <Phone className="w-5 h-5" />
