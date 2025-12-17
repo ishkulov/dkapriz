@@ -1,5 +1,6 @@
 import { Heart, MapPin, Phone, Clock } from "lucide-react";
 import { SiInstagram, SiWhatsapp } from "react-icons/si";
+import logoImage from "@assets/image_1765980730827.png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -9,9 +10,12 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4 md:px-10 lg:px-16 py-12 md:py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           <div className="lg:col-span-1">
-            <span className="font-serif text-2xl font-medium tracking-wide" data-testid="footer-logo">
-              Дамский Каприз
-            </span>
+            <img
+              src={logoImage}
+              alt="Дамский Каприз"
+              className="h-12 w-auto brightness-0 invert"
+              data-testid="footer-logo"
+            />
             <p className="text-white/70 mt-4 text-sm leading-relaxed">
               Магазин нижнего белья и купальников для всей семьи. Качество, комфорт
               и индивидуальный подход.

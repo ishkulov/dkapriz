@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoImage from "@assets/image_1765980730827.png";
 
 interface NavigationProps {
   activeSection?: string;
@@ -48,14 +49,12 @@ export default function Navigation({ activeSection = "home", onNavigate }: Navig
         <div className="max-w-6xl mx-auto px-4 md:px-10 lg:px-16">
           <div className="flex items-center justify-between h-16 md:h-20">
             <div className="flex-shrink-0">
-              <span
-                className={`font-serif text-xl md:text-2xl font-medium tracking-wide transition-colors ${
-                  isScrolled ? "text-foreground" : "text-[#1F1F1F]"
-                }`}
+              <img
+                src={logoImage}
+                alt="Дамский Каприз"
+                className="h-10 md:h-12 w-auto"
                 data-testid="logo"
-              >
-                Дамский Каприз
-              </span>
+              />
             </div>
 
             <div className="hidden md:flex items-center gap-8">
@@ -106,7 +105,7 @@ export default function Navigation({ activeSection = "home", onNavigate }: Navig
         >
           <div className="flex flex-col h-full">
             <div className="flex items-center justify-between p-4 border-b border-border">
-              <span className="font-serif text-xl font-medium">Дамский Каприз</span>
+              <img src={logoImage} alt="Дамский Каприз" className="h-10 w-auto" />
               <Button
                 variant="ghost"
                 size="icon"
