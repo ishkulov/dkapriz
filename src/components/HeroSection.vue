@@ -1,13 +1,29 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
-import heroImage from '@/assets/hero_swimwear_lifestyle_photo.png'
+import { ref, onMounted, onUnmounted } from 'vue'
+import heroImage1 from '@/assets/hero_swimwear_lifestyle_photo.png'
+import heroImage2 from '@/assets/elegant_lingerie_fashion_photo.png'
+import heroImage3 from '@/assets/stylish_swimsuit_fashion_photo.png'
 
 const isVisible = ref(false)
+const currentImageIndex = ref(0)
+let intervalId: number | null = null
+
+const heroImages = [heroImage1, heroImage2, heroImage3]
 
 onMounted(() => {
   setTimeout(() => {
     isVisible.value = true
   }, 100)
+  
+  intervalId = window.setInterval(() => {
+    currentImageIndex.value = (currentImageIndex.value + 1) % heroImages.length
+  }, 10000)
+})
+
+onUnmounted(() => {
+  if (intervalId) {
+    clearInterval(intervalId)
+  }
 })
 
 const scrollToAssortment = () => {
@@ -63,11 +79,18 @@ const scrollToContacts = () => {
           ]"
         >
           <div class="relative animate-float">
-            <img
-              :src="heroImage"
-              alt="Модель в стильном купальнике"
-              class="w-full max-w-sm lg:max-w-md rounded-[32px] shadow-2xl object-cover"
-            />
+            <div class="relative w-full max-w-sm lg:max-w-md aspect-[3/4]">
+              <img
+                v-for="(image, index) in heroImages"
+                :key="index"
+                :src="image"
+                alt="Модель в стильном купальнике"
+                :class="[
+                  'absolute inset-0 w-full h-full rounded-[32px] shadow-2xl object-cover transition-opacity duration-1000',
+                  currentImageIndex === index ? 'opacity-100' : 'opacity-0'
+                ]"
+              />
+            </div>
             <div class="absolute -bottom-4 -left-4 bg-white rounded-2xl p-4 shadow-lg hidden md:block">
               <div class="text-2xl font-serif text-primary">500+</div>
               <div class="text-sm text-muted">моделей в наличии</div>
