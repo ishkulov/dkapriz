@@ -1,14 +1,14 @@
 <script setup lang="ts">
 const contactInfo = {
-  address: 'г. Краснодар, ул. Ставропольская 220',
-  phone: '+7 (861) 299-09-09',
+  address: 'Санкт-Петербург, ул. Наличная, 49',
+  phone: '+7 (921) 892-48-60',
   hours: [
     { days: 'Пн-Сб', time: '10:00 — 19:00' },
     { days: 'Вс', time: '10:00 — 17:00' },
   ],
   socials: {
-    instagram: 'https://instagram.com/damskiy_kapriz_krd',
-    whatsapp: 'https://wa.me/78612990909',
+    instagram: 'https://instagram.com/damskiy_kapriz',
+    whatsapp: 'https://wa.me/79218924860',
   },
 }
 </script>
@@ -103,7 +103,7 @@ const contactInfo = {
 
         <div class="rounded-2xl overflow-hidden h-80 lg:h-auto">
           <iframe
-            src="https://yandex.ru/map-widget/v1/?um=constructor%3A0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a&amp;source=constructor&amp;ll=39.034231%2C45.023059&amp;z=16&amp;pt=39.034231%2C45.023059%2Cpm2rdm"
+            src="https://yandex.ru/map-widget/v1/?ll=30.236508%2C59.935461&z=16&pt=30.236508%2C59.935461%2Cpm2rdm"
             width="100%"
             height="100%"
             style="border: 0; min-height: 320px;"

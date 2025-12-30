@@ -38,8 +38,8 @@ attached_assets/  # Original images and assets
 
 ## Contact Information
 
-- Phone: +7 (861) 299-09-09
-- Address: ул. Ставропольская 220, Краснодар
+- Phone: +7 (921) 892-48-60
+- Address: Санкт-Петербург, ул. Наличная, 49
 - Store emphasizes offline experience (NO delivery mentions)
 
 ## Deployment
