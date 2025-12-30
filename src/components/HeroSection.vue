@@ -78,8 +78,8 @@ const scrollToContacts = () => {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           ]"
         >
-          <div class="relative animate-float">
-            <div class="relative w-full max-w-sm lg:max-w-md aspect-[3/4]">
+          <div class="relative animate-float w-full max-w-sm lg:max-w-md">
+            <div class="relative w-full" style="padding-bottom: 133.33%;">
               <img
                 v-for="(image, index) in heroImages"
                 :key="index"
@@ -91,7 +91,7 @@ const scrollToContacts = () => {
                 ]"
               />
             </div>
-            <div class="absolute -bottom-4 -left-4 bg-white rounded-2xl p-4 shadow-lg hidden md:block">
+            <div class="absolute -bottom-4 -left-4 bg-white rounded-2xl p-4 shadow-lg hidden md:block z-10">
               <div class="text-2xl font-serif text-primary">500+</div>
               <div class="text-sm text-muted">моделей в наличии</div>
             </div>
