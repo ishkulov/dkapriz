@@ -16,17 +16,10 @@ const categories = [
 
 export default function AssortmentSection() {
   return (
-    <section
-      id="assortment"
-      className="py-16 md:py-20 lg:py-24 bg-white"
-      data-testid="assortment-section"
-    >
+    <section id="assortment" className="py-16 md:py-20 lg:py-24 bg-white">
       <div className="max-w-6xl mx-auto px-4 md:px-10 lg:px-16">
         <div className="text-center mb-12">
-          <h2
-            className="font-serif text-3xl md:text-4xl font-medium text-[#1F1F1F] mb-4"
-            data-testid="assortment-title"
-          >
+          <h2 className="font-serif text-3xl md:text-4xl font-medium text-[#1F1F1F] mb-4">
             Ассортимент
           </h2>
           <p className="text-[#7A7A7A] text-base md:text-lg max-w-2xl mx-auto">
@@ -37,17 +30,9 @@ export default function AssortmentSection() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {categories.map((category) => (
-            <div
-              key={category.id}
-              className="group"
-              data-testid={`category-card-${category.id}`}
-            >
+            <div key={category.id} className="group">
               <div className="aspect-square overflow-hidden rounded-2xl bg-[#FDE4EE] mb-4">
-                <img
-                  src={category.image}
-                  alt={category.name}
-                  className="w-full h-full object-cover"
-                />
+                <img src={category.image} alt={category.name} className="w-full h-full object-cover" />
               </div>
               <h3 className="text-center text-lg font-semibold text-[#1F1F1F]">
                 {category.name}
