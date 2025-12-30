@@ -30,11 +30,11 @@ attached_assets/  # Original images and assets
 
 ## Key Components
 
-- HeroSection: Animated floating product image with 12s animation
+- HeroSection: Animated floating product slideshow (3 images, 10s interval) with fade transitions
 - AssortmentSection: 3x2 grid of product categories
 - BenefitsSection: Store advantages (fitting rooms, consultation, etc.)
 - ContactSection: Address, phone, working hours
-- Navigation & Footer
+- Navigation & Footer (responsive, mobile menu at <1024px)
 
 ## Contact Information
 
