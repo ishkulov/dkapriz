@@ -22,16 +22,7 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-3 mt-6">
               <a
-                href="https://instagram.com/damskiy_kapriz"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white/70 hover:bg-primary hover:text-white transition-colors"
-                data-testid="footer-instagram"
-              >
-                <SiInstagram className="w-4 h-4" />
-              </a>
-              <a
-                href="https://wa.me/79001234567"
+                href="https://wa.me/79218924860"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white/70 hover:bg-primary hover:text-white transition-colors"
@@ -84,27 +75,25 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
                 <span data-testid="footer-address">
-                  г. Краснодар, ул. Красная, д. 150
-                  <br />
-                  ТЦ «Галерея», 2 этаж
+                  г. Cанкт-Петербург, Наличная ул., д. 49
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 flex-shrink-0" />
                 <a
-                  href="tel:+79001234567"
+                  href="tel:+79218924860"
                   className="hover:text-white transition-colors"
                   data-testid="footer-phone"
                 >
-                  +7 (900) 123-45-67
+                  +7 (921) 892-48-60
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="w-4 h-4 mt-0.5 flex-shrink-0" />
                 <span data-testid="footer-hours">
-                  Пн-Сб: 10:00-20:00
+                  Пн-Пт: 10:00-20:00
                   <br />
-                  Вс: 11:00-18:00
+                  Сб-Вс: 10:00-19:00
                 </span>
               </li>
             </ul>
@@ -116,7 +105,7 @@ export default function Footer() {
             {currentYear} Дамский Каприз. Все права защищены.
           </p>
           <p className="flex items-center gap-1">
-            Сделано с <Heart className="w-4 h-4 text-primary" /> в Краснодаре
+            Сделано с <Heart className="w-4 h-4 text-primary" /> в Санкт-Петербурге
           </p>
         </div>
       </div>

@@ -76,12 +76,12 @@ export default function Navigation({ activeSection = "home", onNavigate }: Navig
 
             <div className="hidden md:flex items-center gap-4">
               <a
-                href="tel:+79001234567"
+                href="tel:+79218924860"
                 className="flex items-center gap-2 text-sm text-[#3A3A3A] hover:text-primary transition-colors"
                 data-testid="phone-link"
               >
                 <Phone className="w-4 h-4" />
-                <span>+7 (900) 123-45-67</span>
+                <span>+7 (921) 892-48-60</span>
               </a>
             </div>
 
@@ -133,12 +133,12 @@ export default function Navigation({ activeSection = "home", onNavigate }: Navig
             </div>
             <div className="p-6 text-center border-t border-border">
               <a
-                href="tel:+79001234567"
+                href="tel:+79218924860"
                 className="flex items-center justify-center gap-2 text-lg text-[#3A3A3A]"
                 data-testid="mobile-phone-link"
               >
                 <Phone className="w-5 h-5" />
-                <span>+7 (900) 123-45-67</span>
+                <span>+7 (921) 892-48-60</span>
               </a>
             </div>
           </div>

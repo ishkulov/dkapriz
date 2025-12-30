@@ -3,15 +3,15 @@ import { SiInstagram, SiWhatsapp } from "react-icons/si";
 
 // todo: remove mock functionality
 const contactInfo = {
-  address: "г. Санкт-Петербург, Наличная ул., д. 49, ТЦ «Галерея», 2 эта",
-  phone: "+7 (900) 123-45-67",
+  address: "г. Санкт-Петербург, Наличная ул., д. 49",
+  phone: "+7 (921) 892-48-60",
   hours: [
-    { days: "Пн-Сб", time: "10:00 — 20:00" },
-    { days: "Вс", time: "11:00 — 18:00" },
+    { days: "Пн-Пт", time: "10:00 — 20:00" },
+    { days: "Сб-Вс", time: "10:00 — 19:00" },
   ],
   socials: {
     instagram: "https://instagram.com/damskiy_kapriz",
-    whatsapp: "https://wa.me/79001234567",
+    whatsapp: "https://wa.me/79218924860",
   },
 };
 
@@ -90,15 +90,7 @@ export default function ContactSection() {
               <div className="mt-8 pt-6 border-t border-[#FDE4EE]">
                 <p className="text-[#7A7A7A] text-sm mb-4">Мы в социальных сетях:</p>
                 <div className="flex items-center gap-4">
-                  <a
-                    href={contactInfo.socials.instagram}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-full bg-[#FDE4EE] flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors"
-                    data-testid="social-instagram"
-                  >
-                    <SiInstagram className="w-5 h-5" />
-                  </a>
+                  
                   <a
                     href={contactInfo.socials.whatsapp}
                     target="_blank"
@@ -115,7 +107,7 @@ export default function ContactSection() {
 
           <div className="rounded-2xl overflow-hidden h-80 lg:h-auto" data-testid="map-container">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2820.428308671!2d38.97573!3d45.03547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40f04e3e8f8f8f8f%3A0x8f8f8f8f8f8f8f8f!2z0JrRgNCw0YHQvdCw0Y8g0YPQuy4sINCa0YDQsNGB0L3QvtC00LDRgA!5e0!3m2!1sru!2sru!4v1635000000000!5m2!1sru!2sru"
+              src="https://yandex.ru/map-widget/v1/?indoorLevel=1&ll=30.233528%2C59.949956&mode=search&oid=1179203603&ol=biz&z=16.83"
               width="100%"
               height="100%"
               style={{ border: 0, minHeight: "320px" }}
