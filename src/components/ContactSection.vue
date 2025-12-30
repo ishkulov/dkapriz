@@ -3,8 +3,8 @@ const contactInfo = {
   address: 'Санкт-Петербург, ул. Наличная, 49',
   phone: '+7 (921) 892-48-60',
   hours: [
-    { days: 'Пн-Пт', time: '11:00 — 20:00' },
-    { days: 'Сб-Вс', time: '11:00 — 19:00' },
+    { days: 'Пн - Пт', time: '11:00 - 20:00' },
+    { days: 'Сб - Вс', time: '11:00 - 19:00' },
   ],
   socials: {
     whatsapp: 'https://wa.me/79218924860',
