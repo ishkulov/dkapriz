@@ -7,12 +7,13 @@ export default defineConfig({
   base: './',
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
+      '@': path.resolve(import.meta.dirname, './src'),
     },
   },
   server: {
     host: '0.0.0.0',
     port: 5000,
+    allowedHosts: true,
   },
   build: {
     outDir: 'dist',
