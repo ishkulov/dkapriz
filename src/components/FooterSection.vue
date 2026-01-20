@@ -32,12 +32,12 @@ const currentYear = new Date().getFullYear()
           <h4 class="font-medium text-sm mb-4">Навигация</h4>
           <ul class="space-y-3">
             <li v-for="(item, index) in ['Главная', 'Ассортимент', 'Преимущества', 'Контакты']" :key="index">
-              <a
-                :href="'#' + ['home', 'assortment', 'benefits', 'contacts'][index]"
+              <router-link
+                :to="'/#' + ['home', 'assortment', 'benefits', 'contacts'][index]"
                 class="text-white/70 hover:text-white transition-colors text-sm"
               >
                 {{ item }}
-              </a>
+              </router-link>
             </li>
           </ul>
         </div>
@@ -45,10 +45,15 @@ const currentYear = new Date().getFullYear()
         <div>
           <h4 class="font-medium text-sm mb-4">Категории</h4>
           <ul class="space-y-3">
-            <li v-for="(item, index) in ['Купальники', 'Женское бельё', 'Мужские плавки', 'Детские купальники', 'Пляжная одежда']" :key="index">
-              <a href="#assortment" class="text-white/70 hover:text-white transition-colors text-sm">
+            <li>
+              <router-link to="/kupalniky" class="text-white/70 hover:text-white transition-colors text-sm">
+                Купальники
+              </router-link>
+            </li>
+            <li v-for="item in ['Женское бельё', 'Мужские плавки', 'Детские купальники', 'Пляжная одежда']" :key="item">
+              <router-link to="/#assortment" class="text-white/70 hover:text-white transition-colors text-sm">
                 {{ item }}
-              </a>
+              </router-link>
             </li>
           </ul>
         </div>
