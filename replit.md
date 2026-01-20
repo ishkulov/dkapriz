@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a single-page business card website for "Дамский Каприз" (Lady's Caprice), a swimwear and lingerie boutique in Krasnodar, Russia. Built with Vue.js 3 and designed for deployment to GitHub Pages.
+This is a single-page business card website for "Дамский Каприз" (Lady's Caprice), a swimwear and lingerie boutique in St. Petersburg, Russia. Built with Vue.js 3 and designed for deployment to GitHub Pages.
 
 **Important:** This is NOT an e-commerce site. It's a business card website showcasing store information, product categories, benefits, and contact details. No shopping cart, checkout, or product catalog functionality.
 
@@ -35,6 +35,23 @@ attached_assets/  # Original images and assets
 - BenefitsSection: Store advantages (fitting rooms, consultation, etc.)
 - ContactSection: Address, phone, working hours
 - Navigation & Footer (responsive, mobile menu at <1024px)
+
+## Planned Pages (TODO)
+
+Отдельные страницы для каждой категории ассортимента:
+
+1. **/kupainiky** — Купальники (женские купальники)
+2. **/belyo** — Нижнее бельё (женское нижнее бельё)
+3. **/muzhskie-kupainiky** — Мужские купальники
+4. **/detskie-kupainiky** — Детские купальники
+5. **/plazhnaya-odezhda** — Пляжная одежда
+6. **/aksessuary** — Аксессуары для бассейна
+
+Каждая страница должна содержать:
+- Заголовок категории
+- Краткое описание
+- Галерея примеров (без цен и корзины)
+- Кнопка "Посетить магазин" / контактная информация
 
 ## Contact Information
 
