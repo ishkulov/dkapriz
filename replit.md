@@ -77,3 +77,13 @@ attached_assets/  # Original images and assets
 ## Deployment
 
 Project is configured for GitHub Pages deployment via GitHub Actions. See README.md for deployment instructions.
+
+### SPA Routing Fix for GitHub Pages
+
+GitHub Pages doesn't natively support SPA client-side routing. When users directly access routes like `dkapriz.ru/kupalniky`, GitHub returns 404 because it expects a physical file at that path.
+
+**Solution implemented (rafgraph/spa-github-pages):**
+- `public/404.html` - Redirects 404 requests to index.html with encoded path
+- `index.html` - Contains script to decode path and restore proper URL via history.replaceState
+
+This allows direct URL access to all routes like `/kupalniky`, `/belyo`, etc.
