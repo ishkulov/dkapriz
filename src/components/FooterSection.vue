@@ -81,9 +81,9 @@ const currentYear = new Date().getFullYear()
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               <span>
-                Пн-Сб: 10:00-19:00
+                Пн - Пт: 11:00 - 20:00
                 <br />
-                Вс: 10:00-17:00
+                Сб - Вс: 11:00 - 19:00
               </span>
             </li>
           </ul>
