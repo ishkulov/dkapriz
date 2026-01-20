@@ -17,7 +17,7 @@ const contactInfo = {
     <div class="max-w-6xl mx-auto px-4 md:px-10 lg:px-16">
       <div class="text-center mb-12">
         <h2 class="font-serif text-3xl md:text-4xl font-medium text-heading mb-4">
-          Контакты
+          Контакты магазина Дамский Каприз
         </h2>
         <p class="text-muted text-base md:text-lg max-w-2xl mx-auto">
           Приходите к нам в магазин — будем рады видеть вас!

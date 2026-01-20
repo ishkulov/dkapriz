@@ -22,7 +22,7 @@ const categories = [
     <div class="max-w-6xl mx-auto px-4 md:px-10 lg:px-16">
       <div class="text-center mb-12">
         <h2 class="font-serif text-3xl md:text-4xl font-medium text-heading mb-4">
-          Ассортимент
+          Ассортимент магазина
         </h2>
         <p class="text-muted text-base md:text-lg max-w-2xl mx-auto">
           В нашем магазине представлен широкий выбор качественного белья и купальников

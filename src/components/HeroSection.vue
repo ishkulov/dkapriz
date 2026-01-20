@@ -46,11 +46,9 @@ const scrollToContacts = () => {
           ]"
         >
           <h1 class="font-serif text-4xl md:text-5xl lg:text-[48px] font-medium text-heading leading-tight mb-6">
-            Нижнее бельё
+            Нижнее бельё и&nbsp;купальники
             <br />
-            и купальники
-            <br />
-            <span class="italic text-primary">для всей семьи</span>
+            <span class="italic text-primary">в Санкт-Петербурге</span>
           </h1>
           <p class="text-body text-base md:text-lg leading-relaxed mb-8 max-w-md">
             Магазин с широким ассортиментом качественного нижнего белья и купальников.
