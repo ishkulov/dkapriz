@@ -3,6 +3,7 @@ import { ref, onMounted, onUnmounted, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import Navigation from './components/Navigation.vue'
 import FooterSection from './components/FooterSection.vue'
+import CookieConsent from './components/CookieConsent.vue'
 
 const route = useRoute()
 const activeSection = ref('home')
@@ -48,5 +49,6 @@ onUnmounted(() => {
       <router-view />
     </main>
     <FooterSection />
+    <CookieConsent />
   </div>
 </template>
