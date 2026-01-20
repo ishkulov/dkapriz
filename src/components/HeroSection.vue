@@ -46,8 +46,7 @@ const scrollToContacts = () => {
           ]"
         >
           <h1 class="font-serif text-4xl md:text-5xl lg:text-[48px] font-medium text-heading leading-tight mb-6">
-            Нижнее белье и&nbsp;купальники
-            <br />
+            Нижнее белье <br />и купальники<br />
             <span class="italic text-primary">для всей семьи</span>
           </h1>
           <p class="text-body text-base md:text-lg leading-relaxed mb-8 max-w-md">
