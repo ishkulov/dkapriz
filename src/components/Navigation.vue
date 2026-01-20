@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
 import logoImage from '@/assets/logo.png'
 
 defineProps<{
@@ -10,6 +11,8 @@ const emit = defineEmits<{
   navigate: [section: string]
 }>()
 
+const router = useRouter()
+const route = useRoute()
 const isScrolled = ref(false)
 const isMobileMenuOpen = ref(false)
 
@@ -24,12 +27,33 @@ const handleScroll = () => {
   isScrolled.value = window.scrollY > 50
 }
 
-const handleNavClick = (sectionId: string) => {
-  emit('navigate', sectionId)
+const handleNavClick = async (sectionId: string) => {
   isMobileMenuOpen.value = false
-  const element = document.getElementById(sectionId)
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth' })
+  
+  if (route.path !== '/') {
+    await router.push('/')
+    setTimeout(() => {
+      const element = document.getElementById(sectionId)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+      emit('navigate', sectionId)
+    }, 100)
+  } else {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+    emit('navigate', sectionId)
+  }
+}
+
+const goHome = async () => {
+  isMobileMenuOpen.value = false
+  if (route.path !== '/') {
+    await router.push('/')
+  } else {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 }
 
@@ -51,7 +75,7 @@ onUnmounted(() => {
   >
     <div class="max-w-6xl mx-auto px-4 md:px-10 lg:px-16">
       <div class="flex items-center justify-between h-16 md:h-20">
-        <div class="flex-shrink-0">
+        <div class="flex-shrink-0 cursor-pointer" @click="goHome">
           <img :src="logoImage" alt="Дамский Каприз" class="h-10 md:h-12 w-auto" />
         </div>
 

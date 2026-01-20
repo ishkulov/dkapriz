@@ -1,15 +1,13 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted, watch } from 'vue'
-import { useRoute } from 'vue-router'
-import Navigation from './components/Navigation.vue'
-import FooterSection from './components/FooterSection.vue'
+import { ref, onMounted, onUnmounted } from 'vue'
+import HeroSection from '../components/HeroSection.vue'
+import AssortmentSection from '../components/AssortmentSection.vue'
+import BenefitsSection from '../components/BenefitsSection.vue'
+import ContactSection from '../components/ContactSection.vue'
 
-const route = useRoute()
 const activeSection = ref('home')
 
 const handleScroll = () => {
-  if (route.path !== '/') return
-  
   const sections = ['home', 'assortment', 'benefits', 'contacts']
   const scrollPosition = window.scrollY + 100
 
@@ -26,12 +24,6 @@ const handleScroll = () => {
   }
 }
 
-watch(() => route.path, (newPath) => {
-  if (newPath !== '/') {
-    activeSection.value = ''
-  }
-})
-
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
 })
@@ -39,14 +31,15 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
 })
+
+defineExpose({ activeSection })
 </script>
 
 <template>
-  <div class="min-h-screen bg-white">
-    <Navigation :activeSection="activeSection" @navigate="activeSection = $event" />
-    <main>
-      <router-view />
-    </main>
-    <FooterSection />
+  <div>
+    <HeroSection />
+    <AssortmentSection />
+    <BenefitsSection />
+    <ContactSection />
   </div>
 </template>

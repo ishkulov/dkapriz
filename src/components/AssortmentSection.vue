@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { RouterLink } from 'vue-router'
 import swimwearImg from '@/assets/swimwear_category_photo.png'
 import lingerieImg from "@/assets/women's_lingerie_category.png"
 import mensImg from "@/assets/men's_swimwear_category.png"
@@ -7,12 +8,12 @@ import poolImg from '@/assets/pool_accessories_category.png'
 import beachImg from '@/assets/beach_clothing_category.png'
 
 const categories = [
-  { id: '1', name: 'Купальники', image: swimwearImg },
-  { id: '2', name: 'Женское бельё', image: lingerieImg },
-  { id: '3', name: 'Мужские плавки и шорты', image: mensImg },
-  { id: '4', name: 'Детские купальники', image: kidsImg },
-  { id: '5', name: 'Для бассейна', image: poolImg },
-  { id: '6', name: 'Пляжная одежда', image: beachImg },
+  { id: '1', name: 'Купальники', image: swimwearImg, link: '/kupalniky' },
+  { id: '2', name: 'Женское бельё', image: lingerieImg, link: null },
+  { id: '3', name: 'Мужские плавки и шорты', image: mensImg, link: null },
+  { id: '4', name: 'Детские купальники', image: kidsImg, link: null },
+  { id: '5', name: 'Для бассейна', image: poolImg, link: null },
+  { id: '6', name: 'Пляжная одежда', image: beachImg, link: null },
 ]
 </script>
 
@@ -30,14 +31,22 @@ const categories = [
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-        <div v-for="category in categories" :key="category.id" class="group">
-          <div class="aspect-square overflow-hidden rounded-2xl bg-primary-light mb-4">
+        <RouterLink
+          v-for="category in categories"
+          :key="category.id"
+          :to="category.link || '#'"
+          :class="[
+            'group block',
+            category.link ? 'cursor-pointer' : 'cursor-default pointer-events-none'
+          ]"
+        >
+          <div class="aspect-square overflow-hidden rounded-2xl bg-primary-light mb-4 transition-transform duration-300 group-hover:scale-[1.02]">
             <img :src="category.image" :alt="category.name" class="w-full h-full object-cover" />
           </div>
-          <h3 class="text-center text-lg font-semibold text-heading">
+          <h3 class="text-center text-lg font-semibold text-heading group-hover:text-primary transition-colors">
             {{ category.name }}
           </h3>
-        </div>
+        </RouterLink>
       </div>
     </div>
   </section>
