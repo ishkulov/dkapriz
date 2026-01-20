@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a single-page business card website for "Дамский Каприз" (Lady's Caprice), a swimwear and lingerie boutique in St. Petersburg, Russia. Built with Vue.js 3 and designed for deployment to GitHub Pages.
+This is a multi-page business card website for "Дамский Каприз" (Lady's Caprice), a swimwear and lingerie boutique in St. Petersburg, Russia. Built with Vue.js 3 + Vue Router and designed for deployment to GitHub Pages.
 
 **Important:** This is NOT an e-commerce site. It's a business card website showcasing store information, product categories, benefits, and contact details. No shopping cart, checkout, or product catalog functionality.
 
@@ -11,11 +11,19 @@ This is a single-page business card website for "Дамский Каприз" (L
 ```
 src/
   components/     # Vue SFC components
+  pages/          # Page components for each route
+    HomePage.vue
+    KupalnikyPage.vue
+  router/         # Vue Router configuration
+    index.ts
   assets/         # Images and static assets
-  App.vue         # Main app component
-  main.js         # Entry point
+  App.vue         # Main app component with router-view
+  main.ts         # Entry point with router setup
 .github/
   workflows/      # GitHub Actions for deployment
+public/
+  sitemap.xml     # SEO sitemap
+  robots.txt      # Crawling rules
 package.json      # Vue dependencies
 vite.config.ts    # Vite configuration
 attached_assets/  # Original images and assets
@@ -36,22 +44,29 @@ attached_assets/  # Original images and assets
 - ContactSection: Address, phone, working hours
 - Navigation & Footer (responsive, mobile menu at <1024px)
 
-## Planned Pages (TODO)
+## Pages
 
-Отдельные страницы для каждой категории ассортимента:
+### Implemented Pages
 
-1. **/kupainiky** — Купальники (женские купальники)
-2. **/belyo** — Нижнее бельё (женское нижнее бельё)
-3. **/muzhskie-kupainiky** — Мужские купальники
-4. **/detskie-kupainiky** — Детские купальники
-5. **/plazhnaya-odezhda** — Пляжная одежда
-6. **/aksessuary** — Аксессуары для бассейна
+1. **/** — Главная (HomePage): Hero slideshow, AssortmentSection, BenefitsSection, ContactSection
+2. **/kupalniky** — Женские купальники: Hero, description, 17 brands, benefits grid, CTA with contacts
+
+### Planned Pages (TODO)
+
+Отдельные страницы для остальных категорий:
+
+1. **/belyo** — Нижнее бельё (женское нижнее бельё)
+2. **/muzhskie-kupainiky** — Мужские купальники
+3. **/detskie-kupainiky** — Детские купальники
+4. **/plazhnaya-odezhda** — Пляжная одежда
+5. **/aksessuary** — Аксессуары для бассейна
 
 Каждая страница должна содержать:
 - Заголовок категории
 - Краткое описание
-- Галерея примеров (без цен и корзины)
-- Кнопка "Посетить магазин" / контактная информация
+- Секция с брендами (если применимо)
+- Преимущества покупки в магазине
+- Кнопка "Позвонить" / "WhatsApp" / контактная информация
 
 ## Contact Information
 
