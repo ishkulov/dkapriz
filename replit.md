@@ -76,14 +76,30 @@ attached_assets/  # Original images and assets
 
 ## Deployment
 
-Project is configured for GitHub Pages deployment via GitHub Actions. See README.md for deployment instructions.
+Project uses **vite-ssg** for Static Site Generation (SSG) and is configured for GitHub Pages deployment via GitHub Actions.
 
-### SPA Routing Fix for GitHub Pages
+### Static Site Generation (SSG)
 
-GitHub Pages doesn't natively support SPA client-side routing. When users directly access routes like `dkapriz.ru/kupalniky`, GitHub returns 404 because it expects a physical file at that path.
+The site is pre-rendered at build time using `vite-ssg`. Each route gets its own HTML file with full content, improving:
+- **SEO**: Search engines see complete content without JavaScript
+- **Performance**: Faster initial page load
+- **GitHub Pages compatibility**: No SPA routing hacks needed
 
-**Solution implemented (rafgraph/spa-github-pages):**
-- `public/404.html` - Redirects 404 requests to index.html with encoded path
-- `index.html` - Contains script to decode path and restore proper URL via history.replaceState
+**Build command:** `npx vite-ssg build`
 
-This allows direct URL access to all routes like `/kupalniky`, `/belyo`, etc.
+**Output structure:**
+```
+dist/
+├── index.html              # Homepage (/)
+├── kupalniky/
+│   └── index.html          # /kupalniky page
+├── assets/                 # CSS, JS, images
+├── favicon.png
+├── robots.txt
+├── sitemap.xml
+└── 404.html                # Fallback for unknown routes
+```
+
+### GitHub Actions Workflow
+
+The `.github/workflows/deploy.yml` automatically builds and deploys on push to `main` branch using `npx vite-ssg build`.
