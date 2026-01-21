@@ -29,8 +29,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build
-        run: npm run build
+      - name: Build (SSG)
+        run: npx vite-ssg build
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
