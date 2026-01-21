@@ -19,4 +19,9 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
   },
+  ssgOptions: {
+    script: 'async',
+    formatting: 'minify',
+    dirStyle: 'nested',
+  },
 });
