@@ -92,7 +92,7 @@ const contactInfo = {
 
         <div class="rounded-2xl overflow-hidden h-80 lg:h-auto">
           <iframe
-            src="https://yandex.ru/map-widget/v1/org/damskiy_kapriz/1179203603"
+            src="https://yandex.ru/map-widget/v1/?z=12&ol=biz&oid=1179203603"
             width="100%"
             height="100%"
             style="border: 0; min-height: 320px;"
