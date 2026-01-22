@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted, watch } from 'vue'
 import { useRoute } from 'vue-router'
+import { useHead } from '@vueuse/head'
+
 import Navigation from './components/Navigation.vue'
 import FooterSection from './components/FooterSection.vue'
 import CookieConsent from './components/CookieConsent.vue'
