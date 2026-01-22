@@ -12,13 +12,13 @@ export const routes: RouteRecordRaw[] = [
       description: 'Магазин «Дамский Каприз» в Санкт-Петербурге — нижнее белье и купальники для всей семьи. Примерочные кабины, размеры от XS до 6XL.'
     }
   },
-  // {
-  //   path: '/kupalniky',
-  //   name: 'kupalniky',
-  //   component: KupalnikyPage,
-  //   meta: {
-  //     title: 'Дамский Каприз - Женские купальники в СПб',
-  //     description: 'Более 500 моделей женских купальников в Санкт-Петербурге: бикини, слитные, танкини. Бренды Bahama, Ysabel Mora, Feba. Примерка и подбор по фигуре.'
-  //   }
-  // }
+  {
+    path: '/kupalniky',
+    name: 'kupalniky',
+    component: KupalnikyPage,
+    meta: {
+      title: 'Дамский Каприз - Женские купальники в СПб',
+      description: 'Более 500 моделей женских купальников в Санкт-Петербурге: бикини, слитные, танкини. Бренды Bahama, Ysabel Mora, Feba. Примерка и подбор по фигуре.'
+    }
+  }
 ]
