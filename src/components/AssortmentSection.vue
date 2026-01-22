@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
-import swimwearImg from '@/assets/swimwear_category_photo.png'
-import lingerieImg from "@/assets/women's_lingerie_category.png"
-import mensImg from "@/assets/men's_swimwear_category.png"
-import kidsImg from "@/assets/children's_swimwear_category.png"
-import poolImg from '@/assets/pool_accessories_category.png'
-import beachImg from '@/assets/beach_clothing_category.png'
+// Минимальные изменения: используем vite-imagetools для WebP/AVIF и адаптивных размеров
+import swimwearImg from '@/assets/swimwear_category_photo.png?w=450;665;896&format=webp;avif&as=metadata'
+import lingerieImg from "@/assets/women's_lingerie_category.png?w=450;665;896&format=webp;avif&as=metadata"
+import mensImg from "@/assets/men's_swimwear_category.png?w=450;665;896&format=webp;avif&as=metadata"
+import kidsImg from "@/assets/children's_swimwear_category.png?w=450;665;896&format=webp;avif&as=metadata"
+import poolImg from '@/assets/pool_accessories_category.png?w=450;665;896&format=webp;avif&as=metadata'
+import beachImg from '@/assets/beach_clothing_category.png?w=450;665;896&format=webp;avif&as=metadata'
 
 const categories = [
   { id: '1', name: 'Купальники', image: swimwearImg, link: '/kupalniky' },
@@ -41,7 +42,14 @@ const categories = [
           ]"
         >
           <div class="aspect-square overflow-hidden rounded-2xl bg-primary-light mb-4 transition-transform duration-300 group-hover:scale-[1.02]">
-            <img :src="category.image" :alt="category.name" class="w-full h-full object-cover" />
+            <img
+              :src="category.image.find(i => i.width === 665 && i.format === 'webp')?.src"
+              :srcset="category.image.map(i => `${i.src} ${i.width}w`).join(', ')"
+              sizes="(max-width: 768px) 100vw, 665px"
+              :alt="category.name"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
           </div>
           <h3 class="text-center text-lg font-semibold text-heading group-hover:text-primary transition-colors">
             {{ category.name }}

@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
-import heroImage1 from '@/assets/hero_swimwear_lifestyle_photo.png'
-import heroImage2 from '@/assets/elegant_lingerie_fashion_photo.png'
-import heroImage3 from '@/assets/stylish_swimsuit_fashion_photo.png'
+
+import heroImage1 from '@/assets/hero_swimwear_lifestyle_photo.png?w=450;665;896&format=webp;avif&as=metadata'
+import heroImage2 from '@/assets/elegant_lingerie_fashion_photo.png?w=450;665;896&format=webp;avif&as=metadata'
+import heroImage3 from '@/assets/stylish_swimsuit_fashion_photo.png?w=450;665;896&format=webp;avif&as=metadata'
 
 const isVisible = ref(false)
 const currentImageIndex = ref(0)
@@ -80,12 +81,15 @@ const scrollToContacts = () => {
               <img
                 v-for="(image, index) in heroImages"
                 :key="index"
-                :src="image"
+                :src="image.find(i => i.width === 665 && i.format === 'webp')?.src"
+                :srcset="image.map(i => `${i.src} ${i.width}w`).join(', ')"
+                sizes="(max-width: 768px) 100vw, 665px"
                 alt="Модель в стильном купальнике"
                 :class="[
                   'absolute inset-0 w-full h-full rounded-[32px] shadow-2xl object-cover transition-opacity duration-1000',
                   currentImageIndex === index ? 'opacity-100' : 'opacity-0'
                 ]"
+                loading="lazy"
               />
             </div>
             <div class="absolute -bottom-4 -left-4 bg-white rounded-2xl p-4 shadow-lg hidden md:block z-10">
