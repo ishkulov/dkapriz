@@ -6,6 +6,22 @@ import FooterSection from './components/FooterSection.vue'
 import CookieConsent from './components/CookieConsent.vue'
 
 const route = useRoute()
+
+useHead(() => {
+  const path = route.path.endsWith('/')
+    ? route.path
+    : route.path + '/'
+
+  return {
+    link: [
+      {
+        rel: 'canonical',
+        href: 'https://dkapriz.ru' + path
+      }
+    ]
+  }
+})
+  
 const activeSection = ref('home')
 
 const handleScroll = () => {
