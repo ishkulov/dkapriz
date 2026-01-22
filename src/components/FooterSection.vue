@@ -46,7 +46,7 @@ const currentYear = new Date().getFullYear()
           <h4 class="font-medium text-sm mb-4">Категории</h4>
           <ul class="space-y-3">
             <li>
-              <router-link to="/kupalniky" class="text-white/70 hover:text-white transition-colors text-sm">
+              <router-link to="/kupalniki" class="text-white/70 hover:text-white transition-colors text-sm">
                 Купальники
               </router-link>
             </li>

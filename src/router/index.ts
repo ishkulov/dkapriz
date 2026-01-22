@@ -1,6 +1,6 @@
 import type { RouteRecordRaw } from 'vue-router'
 import HomePage from '../pages/HomePage.vue'
-import KupalnikyPage from '../pages/KupalnikyPage.vue'
+import KupalnikiPage from '../pages/KupalnikiPage.vue'
 
 export const routes: RouteRecordRaw[] = [
   {
@@ -13,9 +13,9 @@ export const routes: RouteRecordRaw[] = [
     }
   },
   {
-    path: '/kupalniky',
-    name: 'kupalniky',
-    component: KupalnikyPage,
+    path: '/kupalniki',
+    name: 'kupalniki',
+    component: KupalnikiPage,
     meta: {
       title: 'Дамский Каприз - Женские купальники в СПб',
       description: 'Более 500 моделей женских купальников в Санкт-Петербурге: бикини, слитные, танкини. Бренды Bahama, Ysabel Mora, Feba. Примерка и подбор по фигуре.'

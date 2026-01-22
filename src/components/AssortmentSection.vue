@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
-// Минимальные изменения: используем vite-imagetools для WebP/AVIF и адаптивных размеров
+
 import swimwearImg from '@/assets/swimwear_category_photo.png?w=450;665;896&format=webp;avif&as=metadata'
 import lingerieImg from "@/assets/women's_lingerie_category.png?w=450;665;896&format=webp;avif&as=metadata"
 import mensImg from "@/assets/men's_swimwear_category.png?w=450;665;896&format=webp;avif&as=metadata"
@@ -9,7 +9,7 @@ import poolImg from '@/assets/pool_accessories_category.png?w=450;665;896&format
 import beachImg from '@/assets/beach_clothing_category.png?w=450;665;896&format=webp;avif&as=metadata'
 
 const categories = [
-  { id: '1', name: 'Купальники', image: swimwearImg, link: '/kupalniky' },
+  { id: '1', name: 'Купальники', image: swimwearImg, link: '/kupalniki/' },
   { id: '2', name: 'Женское бельё', image: lingerieImg, link: null },
   { id: '3', name: 'Мужские плавки и шорты', image: mensImg, link: null },
   { id: '4', name: 'Детские купальники', image: kidsImg, link: null },
