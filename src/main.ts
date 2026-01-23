@@ -2,6 +2,8 @@ import { ViteSSG } from 'vite-ssg'
 import App from './App.vue'
 import { routes } from './router'
 import './style.css'
+import { createYandexMetrikaPlugin } from './plugins/yandex-metrika'
+
 
 export const createApp = ViteSSG(
   App,
@@ -13,7 +15,17 @@ export const createApp = ViteSSG(
       return { top: 0, behavior: 'smooth' }
     },
   },
-  ({ router, isClient }) => {
+  ({ router, app, isClient }) => {
+
+    if (!isClient) return
+
+    app.use(
+      createYandexMetrikaPlugin({
+        id: 106242383,
+        router,
+        enabledByDefault: true, 
+      })
+    )
 
     // 1️⃣ Trailing slash normalization
     router.beforeEach((to, from, next) => {
