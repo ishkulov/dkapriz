@@ -2,6 +2,7 @@
 import { ref, onMounted, onUnmounted, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { useHead } from '@unhead/vue'
+import { computed } from 'vue'
 
 import Navigation from './components/Navigation.vue'
 import FooterSection from './components/FooterSection.vue'
@@ -9,20 +10,22 @@ import CookieConsent from './components/CookieConsent.vue'
 
 const route = useRoute()
 
-useHead(() => {
-  const path = route.path.endsWith('/')
-    ? route.path
-    : route.path + '/'
-
-  return {
-    link: [
-      {
-        rel: 'canonical',
-        href: 'https://dkapriz.ru' + path
-      }
-    ]
-  }
-})
+useHead(
+  computed(() => {
+    const path = route.path.endsWith('/') ? route.path : route.path + '/'
+    return {
+      htmlAttrs: {
+        lang: 'ru',
+      },
+      link: [
+        {
+          rel: 'canonical',
+          href: 'https://dkapriz.ru' + path,
+        },
+      ],
+    }
+  })
+)
   
 const activeSection = ref('home')
 
