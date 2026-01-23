@@ -27,10 +27,10 @@ jobs:
           node-version: '22.20.0'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci 
 
       - name: Build (SSG)
-        run: npx vite-ssg build
+        run: npm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
