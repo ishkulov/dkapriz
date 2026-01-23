@@ -14,7 +14,7 @@ export const routes: RouteRecordRaw[] = [
     }
   },
   {
-    path: '/kupalniki',
+    path: '/kupalniki/',
     name: 'kupalniki',
     component: KupalnikiPage,
     meta: {
