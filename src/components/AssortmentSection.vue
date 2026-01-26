@@ -9,8 +9,8 @@ import poolImg from '@/assets/pool_accessories_category.png?w=450;665;896&format
 import beachImg from '@/assets/beach_clothing_category.png?w=450;665;896&format=webp;avif&as=metadata'
 
 const categories = [
-  { id: '1', name: 'Купальники', image: swimwearImg, link: '/kupalniki/' },
-  { id: '2', name: 'Женское бельё', image: lingerieImg, link: null },
+  { id: '1', name: 'Женские купальники', image: swimwearImg, link: '/kupalniki/' },
+  { id: '2', name: 'Нижнее бельё', image: lingerieImg, link: null },
   { id: '3', name: 'Мужские плавки и шорты', image: mensImg, link: null },
   { id: '4', name: 'Детские купальники', image: kidsImg, link: null },
   { id: '5', name: 'Для бассейна', image: poolImg, link: null },
