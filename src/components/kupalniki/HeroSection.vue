@@ -1,8 +1,11 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
 
-import imageSrc from '@/assets/hero_swimwear_fashion_photo.png?w=665&format=webp'
-import imageSrcset from '@/assets/hero_swimwear_fashion_photo.png?w=450;665;896&format=webp;avif&as=srcset'
+import srcsetWebp from '@/assets/hero_swimwear_fashion_photo.png?w=450;665;896&format=webp&as=srcset'
+import srcsetAvif from '@/assets/hero_swimwear_fashion_photo.png?w=450;665;896&format=avif&as=srcset'
+
+import { src as placeholder, width, height } from '@/assets/hero_swimwear_fashion_photo.png?w=665&as=metadata'
+
 
 const isVisible = ref(false)
 
@@ -23,8 +26,17 @@ onMounted(() => {
           isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
         ]">
           <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-xl">
-            <img :src="imageSrc" :srcset="imageSrcset" sizes="(max-width: 768px) 100vw, 665px"
-              alt="Модель в стильном купальнике" class="w-full h-full object-cover" loading="lazy" />
+            <picture>
+              <source :srcset="srcsetAvif" type="image/avif"/>
+              <source :srcset="srcsetWebp" type="image/webp"/>
+              <img
+                :src="placeholder"
+                alt="Модель в стильном купальнике"
+                sizes="(max-width: 768px) 100vw, 665px"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </picture>
           </div>
         </div>
         <div>
