@@ -245,10 +245,10 @@ const galleryImages = [
         >
           <div class="bg-primary-bg rounded-3xl p-8 md:p-12 text-center max-w-2xl mx-auto">
             <h2 class="font-serif text-3xl md:text-4xl font-medium text-heading mb-4">
-              Приглашаем в бутик «Дамский Каприз»
+              Приглашаем в магазине «Дамский Каприз»
             </h2>
             <p class="text-body mb-8">
-              Приходите в «Дамский Каприз», чтобы без спешки выбрать идеальный купальник. 
+              Звоните и приходите в «Дамский Каприз», чтобы без спешки выбрать идеальный купальник. 
               Наслаждайтесь солнцем, морем и отдыхом с комфортом и стилем — в купальнике, который подходит именно вам.
             </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
