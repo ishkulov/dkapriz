@@ -43,14 +43,14 @@ const currentYear = new Date().getFullYear()
         </div>
 
         <div>
-          <h4 class="font-medium text-sm mb-4">Категории</h4>
+          <h4 class="font-medium text-sm mb-4">Ассортимент</h4>
           <ul class="space-y-3">
             <li>
               <router-link to="/kupalniki" class="text-white/70 hover:text-white transition-colors text-sm">
-                Купальники
+                Женские купальники
               </router-link>
             </li>
-            <li v-for="item in ['Женское бельё', 'Мужские плавки', 'Детские купальники', 'Пляжная одежда']" :key="item">
+            <li v-for="item in ['Нижнее бельё', 'Мужские плавки', 'Детские купальники', 'Пляжная одежда']" :key="item">
               <router-link to="/#assortment" class="text-white/70 hover:text-white transition-colors text-sm">
                 {{ item }}
               </router-link>
