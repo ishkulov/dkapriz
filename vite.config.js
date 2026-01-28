@@ -3,6 +3,10 @@ import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import path from 'path'
 import { imagetools } from 'vite-imagetools'
+import { fileURLToPath } from 'node:url'
+import { copyFileSync, existsSync } from 'node:fs'
+
+
 
 export default defineConfig({
   plugins: [
@@ -29,5 +33,15 @@ export default defineConfig({
     script: 'async',
     formatting: 'minify',
     dirStyle: 'nested',
+    onFinished() {
+      const distDir = fileURLToPath(new URL('./dist', import.meta.url))
+      const indexHtml = `${distDir}/index.html`
+      const notFoundHtml = `${distDir}/404.html`
+      
+      if (existsSync(indexHtml)) {
+        copyFileSync(indexHtml, notFoundHtml)
+        console.log('404.html успешно создан')
+      }
+    },
   },
 })

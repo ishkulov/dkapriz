@@ -1,7 +1,7 @@
 import type { RouteRecordRaw } from 'vue-router'
 import HomePage from '../pages/HomePage.vue'
 import KupalnikiPage from '../pages/KupalnikiPage.vue'
-import NotFound from '../pages/NotFoundPage.vue'
+import NotFoundPage from '../pages/NotFoundPage.vue'
 
 export const routes: RouteRecordRaw[] = [
   {
@@ -25,6 +25,10 @@ export const routes: RouteRecordRaw[] = [
   {
     path: '/:pathMatch(.*)*',
     name: 'not-found',
-    component: NotFound,
+    component: NotFoundPage,
+    meta: {
+      title: 'Страница не найдена — магазин «Дамский Каприз»',
+      description: 'Запрашиваемая страница не существует. Вернитесь на главную или выберите раздел.'
+    }
   }
 ]
