@@ -1,7 +1,7 @@
 import type { RouteRecordRaw } from 'vue-router'
 import HomePage from '../pages/HomePage.vue'
 import KupalnikiPage from '../pages/KupalnikiPage.vue'
-import BelyoPage from '../pages/BelyoPage.vue'
+import NizhneeBelePage from '../pages/NizhneeBelePage.vue'
 import NotFoundPage from '../pages/NotFoundPage.vue'
 
 export const routes: RouteRecordRaw[] = [
@@ -26,7 +26,7 @@ export const routes: RouteRecordRaw[] = [
   {
     path: '/nizhnee-bele/',
     name: 'nizhnee-bele',
-    component: BelyoPage,
+    component: NizhneeBelePage,
     meta: {
       title: 'Нижнее бельё — магазин «Дамский Каприз» в СПб',
       description: 'Индивидуальный подбор женского нижнего белья в Санкт-Петербурге. Качественные материалы, примерочные кабины, консультация по размеру и посадке.'
