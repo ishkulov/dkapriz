@@ -1,6 +1,7 @@
 import type { RouteRecordRaw } from 'vue-router'
 import HomePage from '../pages/HomePage.vue'
 import KupalnikiPage from '../pages/KupalnikiPage.vue'
+import BelyoPage from '../pages/BelyoPage.vue'
 import NotFoundPage from '../pages/NotFoundPage.vue'
 
 export const routes: RouteRecordRaw[] = [
@@ -20,6 +21,15 @@ export const routes: RouteRecordRaw[] = [
     meta: {
       title: 'Женские купальники в СПб — магазин «Дамский Каприз»',
       description: 'Более 500 моделей женских купальников в Санкт-Петербурге: бикини, слитные, танкини. Бренды Bahama, Ysabel Mora, Feba. Примерка и подбор по фигуре.'
+    }
+  },
+  {
+    path: '/belyo/',
+    name: 'belyo',
+    component: BelyoPage,
+    meta: {
+      title: 'Нижнее бельё — магазин «Дамский Каприз» в СПб',
+      description: 'Индивидуальный подбор женского нижнего белья в Санкт-Петербурге. Качественные материалы, примерочные кабины, консультация по размеру и посадке.'
     }
   },
   {
