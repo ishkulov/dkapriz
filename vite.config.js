@@ -6,18 +6,16 @@ import { imagetools } from 'vite-imagetools'
 import { fileURLToPath } from 'node:url'
 import { copyFileSync, existsSync } from 'node:fs'
 
-
-
 export default defineConfig({
   plugins: [
     vue(),
     vueDevTools(),
-    imagetools(), // поддержка ?meta, ?webp, ?avif и др.
+    imagetools(),
   ],
   base: '/',
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
+      '@': path.resolve(import.meta.dirname, './src'),
     },
   },
   server: {
