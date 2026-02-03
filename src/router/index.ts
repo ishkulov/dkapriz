@@ -24,8 +24,8 @@ export const routes: RouteRecordRaw[] = [
     }
   },
   {
-    path: '/belyo/',
-    name: 'belyo',
+    path: '/nizhnee-bele/',
+    name: 'nizhnee-bele',
     component: BelyoPage,
     meta: {
       title: 'Нижнее бельё — магазин «Дамский Каприз» в СПб',

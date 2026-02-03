@@ -50,7 +50,7 @@ attached_assets/  # Original images and assets
 
 1. **/** — Главная (HomePage): Hero slideshow, AssortmentSection, BenefitsSection, ContactSection
 2. **/kupalniki** — Женские купальники: Hero, description, 17 brands, benefits grid, CTA with contacts
-3. **/belyo** — Нижнее бельё: Hero с фоновым изображением, описание категории, имиджевый баннер, 4 преимущества, 6 брендов (Lady Lux, Трибуна, Laguna, Allegro, Lauma, Lengy), CTA-блок
+3. **/nizhnee-bele** — Нижнее бельё: Hero с фоновым изображением, описание категории, имиджевый баннер, 4 преимущества, 6 брендов (Lady Lux, Трибуна, Laguna, Allegro, Lauma, Lengy), CTA-блок
 
 ### Planned Pages (TODO)
 
@@ -93,8 +93,8 @@ dist/
 ├── index.html              # Homepage (/)
 ├── kupalniki/
 │   └── index.html          # /kupalniki page
-├── belyo/
-│   └── index.html          # /belyo page
+├── nizhnee-bele/
+│   └── index.html          # /nizhnee-bele page
 ├── assets/                 # CSS, JS, images
 ├── favicon.png
 ├── robots.txt

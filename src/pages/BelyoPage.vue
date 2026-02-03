@@ -16,7 +16,7 @@ useHead({
     { property: 'og:title', content: pageTitle },
     { property: 'og:description', content: pageDescription },
     { property: 'og:type', content: 'website' },
-    { property: 'og:url', content: 'https://dkapriz.ru/belyo/' },
+    { property: 'og:url', content: 'https://dkapriz.ru/nizhnee-bele/' },
     { property: 'og:image', content: 'https://dkapriz.ru/assets/belyo/hero.png' },
     { property: 'og:locale', content: 'ru_RU' }
   ]
