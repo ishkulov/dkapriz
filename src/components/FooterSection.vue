@@ -46,11 +46,16 @@ const currentYear = new Date().getFullYear()
           <h4 class="font-medium text-sm mb-4">Ассортимент</h4>
           <ul class="space-y-3">
             <li>
-              <router-link to="/kupalniki" class="text-white/70 hover:text-white transition-colors text-sm">
+              <router-link to="/kupalniki/" class="text-white/70 hover:text-white transition-colors text-sm">
                 Женские купальники
               </router-link>
             </li>
-            <li v-for="item in ['Нижнее бельё', 'Мужские плавки', 'Детские купальники', 'Пляжная одежда']" :key="item">
+            <li>
+              <router-link to="/nizhnee-bele/" class="text-white/70 hover:text-white transition-colors text-sm">
+                Нижнее бельё
+              </router-link>
+            </li>
+            <li v-for="item in ['Мужские плавки', 'Детские купальники', 'Пляжная одежда']" :key="item">
               <router-link to="/#assortment" class="text-white/70 hover:text-white transition-colors text-sm">
                 {{ item }}
               </router-link>
