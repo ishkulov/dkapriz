@@ -49,14 +49,14 @@ attached_assets/  # Original images and assets
 ### Implemented Pages
 
 1. **/** — Главная (HomePage): Hero slideshow, AssortmentSection, BenefitsSection, ContactSection
-2. **/kupalniky** — Женские купальники: Hero, description, 17 brands, benefits grid, CTA with contacts
+2. **/kupalniki** — Женские купальники: Hero, description, 17 brands, benefits grid, CTA with contacts
+3. **/belyo** — Нижнее бельё: Hero с фоновым изображением, описание категории, имиджевый баннер, 4 преимущества, 6 брендов (Lady Lux, Трибуна, Laguna, Allegro, Lauma, Lengy), CTA-блок
 
 ### Planned Pages (TODO)
 
 Отдельные страницы для остальных категорий:
 
-1. **/belyo** — Нижнее бельё (женское нижнее бельё)
-2. **/muzhskie-kupainiky** — Мужские купальники
+1. **/muzhskie-kupainiky** — Мужские купальники
 3. **/detskie-kupainiky** — Детские купальники
 4. **/plazhnaya-odezhda** — Пляжная одежда
 5. **/aksessuary** — Аксессуары для бассейна
@@ -91,8 +91,10 @@ The site is pre-rendered at build time using `vite-ssg`. Each route gets its own
 ```
 dist/
 ├── index.html              # Homepage (/)
-├── kupalniky/
-│   └── index.html          # /kupalniky page
+├── kupalniki/
+│   └── index.html          # /kupalniki page
+├── belyo/
+│   └── index.html          # /belyo page
 ├── assets/                 # CSS, JS, images
 ├── favicon.png
 ├── robots.txt
