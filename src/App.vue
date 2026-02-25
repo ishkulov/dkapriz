@@ -12,7 +12,7 @@ const route = useRoute()
 
 useHead(
   computed(() => {
-    const path = route.path.endsWith('/') ? route.path : route.path + '/'
+    const path = route.path === '/' ? '' : (route.path.endsWith('/') ? route.path : route.path + '/')
     return {
       htmlAttrs: {
         lang: 'ru',
