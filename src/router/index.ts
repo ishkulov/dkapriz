@@ -19,7 +19,7 @@ export const routes: RouteRecordRaw[] = [
     name: 'kupalniki',
     component: KupalnikiPage,
     meta: {
-      title: 'Женские купальники в СПб — магазин «Дамский Каприз»',
+      title: 'Купальники женские в СПб — магазин «Дамский Каприз»',
       description: 'Более 500 моделей женских купальников в Санкт-Петербурге: бикини, слитные, танкини. Бренды Bahama, Ysabel Mora, Feba. Примерка и подбор по фигуре.'
     }
   },
