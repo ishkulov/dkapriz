@@ -55,7 +55,12 @@ const currentYear = new Date().getFullYear()
                 Нижнее бельё
               </router-link>
             </li>
-            <li v-for="item in ['Мужские плавки', 'Детские купальники', 'Пляжная одежда']" :key="item">
+            <li>
+              <router-link to="/plavki-i-shorty/" class="text-white/70 hover:text-white transition-colors text-sm">
+                Мужские плавки
+              </router-link>
+            </li>
+            <li v-for="item in ['Детские купальники', 'Пляжная одежда']" :key="item">
               <router-link to="/#assortment" class="text-white/70 hover:text-white transition-colors text-sm">
                 {{ item }}
               </router-link>

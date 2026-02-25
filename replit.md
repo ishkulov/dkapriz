@@ -49,17 +49,17 @@ attached_assets/  # Original images and assets
 ### Implemented Pages
 
 1. **/** — Главная (HomePage): Hero slideshow, AssortmentSection, BenefitsSection, ContactSection
-2. **/kupalniki** — Женские купальники: Hero, description, 17 brands, benefits grid, CTA with contacts
-3. **/nizhnee-bele** — Нижнее бельё: Hero с фоновым изображением, описание категории, имиджевый баннер, 4 преимущества, 6 брендов (Lady Lux, Трибуна, Laguna, Allegro, Lauma, Lengy), CTA-блок
+2. **/kupalniki/** — Женские купальники: Hero, description, 17 brands, benefits grid, CTA with contacts
+3. **/nizhnee-bele/** — Нижнее бельё: Hero с фоновым изображением, описание категории, имиджевый баннер, 4 преимущества, 6 брендов (Lady Lux, Трибуна, Laguna, Allegro, Lauma, Lengy), CTA-блок
+4. **/plavki-i-shorty/** — Мужские плавки и шорты: Hero, описание с изображением, блок «Почему выбирают нас» (4 карточки), SEO-блок «Как выбрать», 3 бренда (Keano, Emdi, Scuba), CTA-блок
 
 ### Planned Pages (TODO)
 
 Отдельные страницы для остальных категорий:
 
-1. **/muzhskie-kupainiky** — Мужские купальники
-3. **/detskie-kupainiky** — Детские купальники
-4. **/plazhnaya-odezhda** — Пляжная одежда
-5. **/aksessuary** — Аксессуары для бассейна
+1. **/detskie-kupainiky** — Детские купальники
+2. **/plazhnaya-odezhda** — Пляжная одежда
+3. **/aksessuary** — Аксессуары для бассейна
 
 Каждая страница должна содержать:
 - Заголовок категории

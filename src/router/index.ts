@@ -2,6 +2,7 @@ import type { RouteRecordRaw } from 'vue-router'
 import HomePage from '../pages/HomePage.vue'
 import KupalnikiPage from '../pages/KupalnikiPage.vue'
 import NizhneeBelePage from '../pages/NizhneeBelePage.vue'
+import PlavkiShortyPage from '../pages/PlavkiShortyPage.vue'
 import NotFoundPage from '../pages/NotFoundPage.vue'
 
 export const routes: RouteRecordRaw[] = [
@@ -30,6 +31,15 @@ export const routes: RouteRecordRaw[] = [
     meta: {
       title: 'Нижнее бельё — магазин «Дамский Каприз» в СПб',
       description: 'Индивидуальный подбор женского нижнего белья в Санкт-Петербурге. Качественные материалы, примерочные кабины, консультация по размеру и посадке.'
+    }
+  },
+  {
+    path: '/plavki-i-shorty/',
+    name: 'plavki-i-shorty',
+    component: PlavkiShortyPage,
+    meta: {
+      title: 'Мужские плавки и шорты — магазин «Дамский Каприз» в СПб',
+      description: 'Мужские плавки и пляжные шорты в Санкт-Петербурге. Бренды Keano, Emdi, Scuba. Комфортные модели для пляжа и бассейна. Магазин «Дамский Каприз».'
     }
   },
   {
