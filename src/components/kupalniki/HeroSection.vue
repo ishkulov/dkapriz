@@ -41,7 +41,7 @@ onMounted(() => {
         </div>
         <div>
           <h1 class="font-serif text-4xl md:text-5xl lg:text-[56px] font-medium text-heading leading-tight mb-6">
-            Женские купальники в&nbsp;Санкт-Петербурге
+            Купальники женские в&nbsp;Санкт-Петербурге
           </h1>
           <p class="text-body text-lg md:text-xl leading-relaxed mb-8">
             Планируете отпуск у моря, поездку к солнцу или просто ищете удобный и красивый купальник для бассейна?
