@@ -56,7 +56,7 @@ const currentYear = new Date().getFullYear()
               </router-link>
             </li>
             <li>
-              <router-link to="/plavki-i-shorty/" class="text-white/70 hover:text-white transition-colors text-sm">
+              <router-link to="/plavki-i-shorty/" class="text-white/70 hover:text-white transition-colors text-sm" data-testid="link-footer-plavki">
                 Мужские плавки
               </router-link>
             </li>
