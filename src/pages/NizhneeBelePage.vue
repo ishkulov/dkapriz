@@ -14,6 +14,7 @@ useHead({
   title: pageTitle,
   meta: [
     { name: 'description', content: pageDescription },
+    { name: 'keywords', content: 'женское бельё, Lady Lux, Lauma, индивидуальный подбор' },
     { property: 'og:title', content: pageTitle },
     { property: 'og:description', content: pageDescription },
     { property: 'og:type', content: 'website' },

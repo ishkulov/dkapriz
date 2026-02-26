@@ -50,6 +50,7 @@ export const createApp = ViteSSG(
       const meta = to.meta as {
         title?: string
         description?: string
+        keywords?: string
       }
 
       if (isClient && meta.title) {
@@ -68,6 +69,21 @@ export const createApp = ViteSSG(
         }
 
         descriptionMeta.setAttribute('content', meta.description)
+      }
+
+      if (isClient) {
+        let keywordsMeta = document.querySelector('meta[name="keywords"]')
+
+        if (meta.keywords) {
+          if (!keywordsMeta) {
+            keywordsMeta = document.createElement('meta')
+            keywordsMeta.setAttribute('name', 'keywords')
+            document.head.appendChild(keywordsMeta)
+          }
+          keywordsMeta.setAttribute('content', meta.keywords)
+        } else if (keywordsMeta) {
+          keywordsMeta.removeAttribute('content')
+        }
       }
 
       next()
