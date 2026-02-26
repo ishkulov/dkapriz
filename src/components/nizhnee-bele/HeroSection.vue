@@ -14,10 +14,10 @@ onMounted(() => {
 <template>
   <section class="relative min-h-[600px] md:min-h-[700px] flex items-center">
     <div class="absolute inset-0">
-      <img :src="heroImage" alt="Нижнее бельё" class="w-full h-full object-cover object-top" />
-      <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent"></div>
+      <img :src="heroImage" alt="Нижнее бельё" class="w-full h-full object-cover object-left" />
+      <div class="absolute inset-0 bg-gradient-to-l from-black/35 via-black/15 to-transparent"></div>
     </div>
-    <div class="relative z-10 max-w-6xl mx-auto px-4 md:px-10 lg:px-16 py-32">
+    <div class="relative z-10 w-full max-w-6xl mx-auto px-4 md:px-10 lg:px-16 py-32 flex justify-end">
       <div class="max-w-xl">
         <h1
           :class="[
