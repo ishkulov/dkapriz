@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import heroImage from '@/assets/image_1773567411914.png'
+import heroImage from '@/assets/image_1773570072236.png'
 
 const isVisible = ref(false)
 
@@ -14,14 +14,13 @@ onMounted(() => {
 <template>
   <section class="relative min-h-[600px] md:min-h-[700px] flex items-center">
     <div class="absolute inset-0">
-      <img :src="heroImage" alt="Детские купальники" class="w-full h-full object-cover object-top" />
-      <div class="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent"></div>
+      <img :src="heroImage" alt="Детские купальники" class="w-full h-full object-cover object-center" />
     </div>
     <div class="relative z-10 max-w-6xl mx-auto px-4 md:px-10 lg:px-16 py-32">
       <div class="max-w-xl">
         <h1
           :class="[
-            'font-serif text-4xl md:text-5xl lg:text-6xl font-medium text-white leading-tight mb-6 transition-all duration-700',
+            'font-serif text-4xl md:text-5xl lg:text-6xl font-medium text-heading leading-tight mb-6 transition-all duration-700 drop-shadow-[0_1px_2px_rgba(255,255,255,0.6)]',
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           ]"
           data-testid="text-page-title"
@@ -30,7 +29,7 @@ onMounted(() => {
         </h1>
         <p
           :class="[
-            'text-white/90 text-lg md:text-xl leading-relaxed mb-8 transition-all duration-700 delay-100',
+            'text-body text-lg md:text-xl leading-relaxed mb-8 transition-all duration-700 delay-100 drop-shadow-[0_1px_2px_rgba(255,255,255,0.6)]',
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           ]"
           data-testid="text-hero-subtitle"
