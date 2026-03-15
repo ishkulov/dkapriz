@@ -12,7 +12,7 @@ const categories = [
   { id: '1', name: 'Купальники женские', image: swimwearImg, link: '/kupalniki/' },
   { id: '2', name: 'Нижнее бельё', image: lingerieImg, link: '/nizhnee-bele/' },
   { id: '3', name: 'Мужские плавки и шорты', image: mensImg, link: '/plavki-i-shorty/' },
-  { id: '4', name: 'Детские купальники', image: kidsImg, link: null },
+  { id: '4', name: 'Детские купальники', image: kidsImg, link: '/detskie-kupalniki/' },
   { id: '5', name: 'Для бассейна', image: poolImg, link: null },
   { id: '6', name: 'Пляжная одежда', image: beachImg, link: null },
 ]

@@ -3,6 +3,7 @@ import HomePage from '../pages/HomePage.vue'
 import KupalnikiPage from '../pages/KupalnikiPage.vue'
 import NizhneeBelePage from '../pages/NizhneeBelePage.vue'
 import PlavkiShortyPage from '../pages/PlavkiShortyPage.vue'
+import DetskieKupalnikiPage from '../pages/DetskieKupalnikiPage.vue'
 import NotFoundPage from '../pages/NotFoundPage.vue'
 
 export const routes: RouteRecordRaw[] = [
@@ -44,6 +45,16 @@ export const routes: RouteRecordRaw[] = [
       title: 'Мужские плавки и шорты — магазин «Дамский Каприз» в СПб',
       description: 'Мужские плавки и пляжные шорты в Санкт-Петербурге. Бренды Keano, Emdi, Scuba. Комфортные модели для пляжа и бассейна. Магазин «Дамский Каприз».',
       keywords: 'мужские плавки, пляжные шорты, Keano, Emdi, Scuba'
+    }
+  },
+  {
+    path: '/detskie-kupalniki/',
+    name: 'detskie-kupalniki',
+    component: DetskieKupalnikiPage,
+    meta: {
+      title: 'Детские купальники — магазин «Дамский Каприз» в СПб',
+      description: 'Детские купальники и плавки в Санкт-Петербурге. Бренды Charmante, Emdi. Модели с UV-защитой для мальчиков и девочек всех возрастов. Магазин «Дамский Каприз».',
+      keywords: 'детские купальники, купальник для девочки, плавки для мальчика, Charmante, Emdi'
     }
   },
   {
