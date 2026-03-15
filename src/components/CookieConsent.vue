@@ -35,17 +35,15 @@ const acceptConsent = () => {
   initYandexMetrika()
 }
 
-const declineConsent = () => {
-  localStorage.setItem(CONSENT_KEY, 'declined')
-  isVisible.value = false
-}
-
 onMounted(() => {
   const consent = localStorage.getItem(CONSENT_KEY)
-  if (!consent) {
-    isVisible.value = true
-  } else if (consent === 'accepted') {
+  if (consent === 'accepted') {
     initYandexMetrika()
+  } else {
+    if (consent === 'declined') {
+      localStorage.removeItem(CONSENT_KEY)
+    }
+    isVisible.value = true
   }
 })
 </script>
@@ -59,29 +57,17 @@ onMounted(() => {
       <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 md:p-8">
         <div class="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
           <div class="flex-1">
-            <div class="flex items-center gap-3 mb-2">
-              <svg class="w-6 h-6 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-              </svg>
-              <h3 class="font-serif text-lg font-semibold text-heading">Использование аналитики</h3>
-            </div>
             <p class="text-body text-sm md:text-base leading-relaxed">
-              На этом сайте используется Яндекс.Метрика для сбора аналитических данных. 
-              Продолжая использовать сайт, вы соглашаетесь с этим.
+              Мы используем cookie и сервис аналитики Яндекс Метрика для анализа посещаемости сайта. Продолжая пользоваться сайтом, вы соглашаетесь с обработкой данных.
             </p>
           </div>
-          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 flex-shrink-0">
-            <button
-              @click="declineConsent"
-              class="px-6 py-3 text-sm font-medium text-body border border-gray-200 rounded-full hover:bg-gray-50 transition-colors"
-            >
-              Отказаться
-            </button>
+          <div class="flex-shrink-0">
             <button
               @click="acceptConsent"
+              data-testid="button-cookie-accept"
               class="px-6 py-3 text-sm font-medium text-white bg-primary rounded-full hover:bg-primary/90 transition-colors"
             >
-              Согласен
+              Понятно
             </button>
           </div>
         </div>
