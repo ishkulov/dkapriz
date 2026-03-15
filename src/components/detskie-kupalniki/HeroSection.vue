@@ -14,7 +14,7 @@ onMounted(() => {
 <template>
   <section class="relative min-h-[600px] md:min-h-[700px] flex items-center">
     <div class="absolute inset-0">
-      <img :src="heroImage" alt="Детские купальники" class="w-full h-full object-cover object-center" />
+      <img :src="heroImage" alt="Детские купальники" class="w-full h-full object-cover object-right md:object-left" />
     </div>
     <div class="relative z-10 max-w-6xl mx-auto px-4 md:px-10 lg:px-16 py-32">
       <div class="max-w-xl">
